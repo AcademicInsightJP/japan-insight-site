@@ -78,29 +78,29 @@ a:hover {
   align-items: center;
   overflow: hidden;
   background:
-    linear-gradient(120deg, rgba(16, 42, 67, 0.96), rgba(23, 63, 111, 0.74)),
-    radial-gradient(circle at 15% 25%, rgba(215, 169, 75, 0.34), transparent 28%),
-    radial-gradient(circle at 78% 20%, rgba(112, 178, 219, 0.36), transparent 32%),
-    radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.18), transparent 24%),
-    linear-gradient(135deg, #102a43, #1f5f99);
+    linear-gradient(
+      90deg,
+      rgba(16, 42, 67, 0.92) 0%,
+      rgba(16, 42, 67, 0.72) 42%,
+      rgba(16, 42, 67, 0.28) 100%
+    ),
+    url("/images/index-images/hero.jpg") center/cover no-repeat;
 }
 
 .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px),
-    linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px);
-  background-size: 46px 46px;
-  opacity: 0.36;
+  content: none;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(16, 42, 67, 0.95) 0%, rgba(16, 42, 67, 0.76) 42%, rgba(16, 42, 67, 0.38) 100%);
+    linear-gradient(
+      90deg,
+      rgba(16, 42, 67, 0.75) 0%,
+      rgba(16, 42, 67, 0.45) 45%,
+      rgba(16, 42, 67, 0.12) 100%
+    );
   z-index: 1;
 }
 
@@ -188,6 +188,7 @@ a:hover {
 }
 
 /* Single full-width intro box */
+
 .intro-section .container {
   display: block;
 }
