@@ -12,12 +12,12 @@
   <meta property="og:description" content="A sample article template for Japan Insights for Professionals, explaining Japan-related systems in clear English for globally minded professionals.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://japan-insight-site.pages.dev/articles/housing/sample-article.html">
-  <meta property="og:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
+  <meta property="og:image" content="https://japan-insight-site.pages.dev/images/article-images/housing/sample-article.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sample Article Title | Japan Insights for Professionals">
   <meta name="twitter:description" content="A sample article template for Japan Insights for Professionals, explaining Japan-related systems in clear English for globally minded professionals.">
-  <meta name="twitter:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
+  <meta name="twitter:image" content="https://japan-insight-site.pages.dev/images/article-images/housing/sample-article.jpg">
 
   <script type="application/ld+json">
   {
@@ -39,7 +39,7 @@
       "@type": "WebPage",
       "@id": "https://japan-insight-site.pages.dev/articles/housing/sample-article.html"
     },
-    "image": "https://japan-insight-site.pages.dev/images/index-images/hero.jpg"
+    "image": "https://japan-insight-site.pages.dev/images/article-images/housing/sample-article.jpg"
   }
   </script>
 
@@ -105,9 +105,30 @@
     .article-meta-line {
       color: var(--muted);
       font-size: 0.95rem;
-      margin-bottom: 28px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .article-feature-image {
+      margin: 0 0 32px;
+      border: 1px solid var(--border);
+      background: var(--light-bg);
+    }
+
+    .article-feature-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .article-feature-image figcaption {
+      padding: 10px 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.5;
+      border-top: 1px solid var(--border);
+      background: var(--white);
     }
 
     .article-lead {
@@ -115,6 +136,8 @@
       color: #374151;
       line-height: 1.75;
       margin-bottom: 32px;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
     }
 
     .article-main h2 {
@@ -254,6 +277,10 @@
       .article-lead {
         font-size: 1.05rem;
       }
+
+      .article-feature-image img {
+        aspect-ratio: 4 / 3;
+      }
     }
   </style>
 </head>
@@ -288,6 +315,13 @@
           <p class="article-meta-line">
             Published May 4, 2026 · Last updated May 4, 2026
           </p>
+
+          <figure class="article-feature-image">
+            <img src="/images/article-images/housing/sample-article.jpg" alt="Sample article image for a guide about housing and life in Japan">
+            <figcaption>
+              Sample caption: Replace this image and caption with a topic-specific visual for each article.
+            </figcaption>
+          </figure>
 
           <p class="article-lead">
             This is a lead paragraph for the article. It should quickly explain who the article
