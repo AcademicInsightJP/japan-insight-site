@@ -97,7 +97,7 @@ a:hover {
       rgba(16, 42, 67, 0.72) 42%,
       rgba(16, 42, 67, 0.28) 100%
     ),
-    url("/images/index_images/hero.jpg") center/cover no-repeat;
+    url("/images/index-images/hero.jpg") center/cover no-repeat;
 }
 
 .hero::after {
