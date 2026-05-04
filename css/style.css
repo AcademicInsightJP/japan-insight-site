@@ -45,22 +45,35 @@ a:hover {
 .header-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 18px 24px;
+  padding: 12px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Logo */
+
 .site-logo {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--navy);
-  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo img {
+  display: block;
+  height: 46px;
+  width: auto;
+  max-width: 380px;
+}
+
+.site-logo:hover {
+  text-decoration: none;
 }
 
 .main-nav {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 
 .main-nav a {
@@ -84,7 +97,7 @@ a:hover {
       rgba(16, 42, 67, 0.72) 42%,
       rgba(16, 42, 67, 0.28) 100%
     ),
-    url("/images/index-images/hero.jpg") center/cover no-repeat;
+    url("/images/index_images/hero.jpg") center/cover no-repeat;
 }
 
 .hero::after {
@@ -358,6 +371,12 @@ a:hover {
     align-items: flex-start;
     flex-direction: column;
     gap: 12px;
+    padding: 12px 20px;
+  }
+
+  .site-logo img {
+    height: 38px;
+    max-width: 280px;
   }
 
   .main-nav {
