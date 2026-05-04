@@ -4,37 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Japan Insights for Professionals</title>
-  <meta name="description" content="Practical English guides for students, researchers, industry professionals, and readers navigating universities, industry, finance, contracts, and systems in Japan.">
-  <link rel="canonical" href="https://japan-insight-site.pages.dev/">
+  <title>Articles | Japan Insights for Professionals</title>
+  <meta name="description" content="Articles for students, researchers, academics, industry professionals, and globally minded readers navigating finance, contracts, and practical systems in Japan.">
+  <link rel="canonical" href="https://japan-insight-site.pages.dev/articles.html">
 
   <link rel="icon" type="image/png" href="/images/common/favicon.png">
   <link rel="apple-touch-icon" href="/images/common/favicon.png">
 
-  <meta property="og:title" content="Japan Insights for Professionals">
-  <meta property="og:description" content="Practical English guides for students, researchers, industry professionals, and readers navigating universities, industry, finance, contracts, and systems in Japan.">
+  <meta property="og:title" content="Articles | Japan Insights for Professionals">
+  <meta property="og:description" content="Articles for students, researchers, academics, industry professionals, and globally minded readers navigating finance, contracts, and practical systems in Japan.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://japan-insight-site.pages.dev/">
+  <meta property="og:url" content="https://japan-insight-site.pages.dev/articles.html">
   <meta property="og:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Japan Insights for Professionals">
-  <meta name="twitter:description" content="Practical English guides for students, researchers, industry professionals, and readers navigating universities, industry, finance, contracts, and systems in Japan.">
+  <meta name="twitter:title" content="Articles | Japan Insights for Professionals">
+  <meta name="twitter:description" content="Articles for students, researchers, academics, industry professionals, and globally minded readers navigating finance, contracts, and practical systems in Japan.">
   <meta name="twitter:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
 
   <link rel="stylesheet" href="/css/style.css">
 
   <style>
-    @media (min-width: 901px) {
-      .hero-content-pc-left {
-        transform: translateX(-140px);
-      }
+    .article-category-section {
+      padding: 36px 0;
     }
 
-    @media (max-width: 900px) {
-      .hero-content-pc-left {
-        transform: none;
-      }
+    .article-category-section:first-of-type {
+      padding-top: 16px;
+    }
+
+    .category-description {
+      max-width: 820px;
+      color: var(--muted);
+      margin-top: -8px;
+      margin-bottom: 24px;
+    }
+
+    .article-category-nav {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .article-category-nav a {
+      display: block;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
+      padding: 22px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .article-category-nav a:hover {
+      text-decoration: none;
+      border-color: var(--accent);
+    }
+
+    .category-small-label {
+      display: block;
+      color: var(--accent);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
     .latest-item-with-thumb {
@@ -67,12 +101,17 @@
       text-decoration: none;
     }
 
-    .view-all-link {
-      margin-top: 28px;
-      text-align: center;
+    @media (max-width: 900px) {
+      .article-category-nav {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 640px) {
+      .article-category-nav {
+        grid-template-columns: 1fr;
+      }
+
       .latest-item-with-thumb {
         grid-template-columns: 1fr;
       }
@@ -100,81 +139,54 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-overlay"></div>
+    <section class="intro-section">
+      <div class="container">
+        <div class="intro-text">
+          <p class="section-label">Articles</p>
+          <h2>Guides organized by reader needs.</h2>
+          <p>
+            Articles are organized for students, researchers and academics, industry
+            professionals, and readers who need practical explanations of finance,
+            contracts, housing costs, salary, taxes, investing, and everyday systems in Japan.
+          </p>
 
-      <div class="hero-content hero-content-pc-left">
-        <p class="hero-label">For globally minded professionals</p>
-        <h1>Practical insights into universities, industry, and finance in Japan.</h1>
-        <p class="hero-subtitle">
-          Clear English guides for students, researchers, engineers, business professionals,
-          and globally mobile readers navigating Japanese systems.
+          <div class="article-category-nav">
+            <a href="#students">
+              <span class="category-small-label">Students</span>
+              Students
+            </a>
+
+            <a href="#academia">
+              <span class="category-small-label">Academia</span>
+              Researchers &amp; Academics
+            </a>
+
+            <a href="#industry">
+              <span class="category-small-label">Industry</span>
+              Industry Professionals
+            </a>
+
+            <a href="#finance">
+              <span class="category-small-label">Finance</span>
+              Finance &amp; Contracts
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="students" class="article-category-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Students</p>
+          <h2>Students</h2>
+        </div>
+
+        <p class="category-description">
+          Guides for international students, prospective graduate students, exchange students,
+          and applicants who want to understand Japanese universities, scholarships, student life,
+          and basic procedures before or after coming to Japan.
         </p>
-
-        <div class="hero-actions">
-          <a class="button-primary" href="/articles.html">Read Articles</a>
-          <a class="button-secondary" href="/about.html">About This Site</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="featured-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">Start here</p>
-          <h2>Featured topics</h2>
-        </div>
-
-        <div class="card-grid">
-          <article class="topic-card">
-            <div class="card-tag">Students</div>
-            <h3>Students</h3>
-            <p>
-              Guides for international students and applicants considering Japanese
-              universities, scholarships, graduate school, student life, and basic procedures.
-            </p>
-            <a href="/articles.html#students">View student guides →</a>
-          </article>
-
-          <article class="topic-card">
-            <div class="card-tag">Academia</div>
-            <h3>Researchers &amp; Academics</h3>
-            <p>
-              Practical information for PhD students, postdocs, researchers, faculty candidates,
-              and academics navigating Japanese universities and research systems.
-            </p>
-            <a href="/articles.html#academia">View academic guides →</a>
-          </article>
-
-          <article class="topic-card">
-            <div class="card-tag">Industry</div>
-            <h3>Industry Professionals</h3>
-            <p>
-              Notes for engineers, R&amp;D workers, business professionals, and globally minded
-              readers interested in Japanese companies, work culture, and industry systems.
-            </p>
-            <a href="/articles.html#industry">View industry guides →</a>
-          </article>
-
-          <article class="topic-card">
-            <div class="card-tag">Finance</div>
-            <h3>Finance &amp; Contracts</h3>
-            <p>
-              Plain-English explanations of money, salary, taxes, pensions, housing costs,
-              rental fees, contracts, banking, and other practical systems in Japan.
-            </p>
-            <a href="/articles.html#finance">View finance guides →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="latest-section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">Latest articles</p>
-          <h2>Recent guides</h2>
-        </div>
 
         <div class="latest-list">
           <article class="latest-item latest-item-with-thumb">
@@ -190,8 +202,101 @@
                 </a>
               </h3>
               <p>
-                A practical guide for international students on writing a concise, respectful,
-                and research-focused first email to a Japanese professor.
+                A practical guide to writing a concise, respectful, and research-focused
+                first email to a Japanese professor before applying.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/students/students-260504-02-mext.html" aria-label="Read MEXT Scholarship Basics for Prospective Graduate Students">
+              <img src="/images/article-images/students/students-260504-02-mext.jpg" alt="A prospective graduate student reviewing scholarship documents for study in Japan" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Students · May 4, 2026</p>
+              <h3>
+                <a href="/articles/students/students-260504-02-mext.html">
+                  MEXT Scholarship Basics for Prospective Graduate Students
+                </a>
+              </h3>
+              <p>
+                A practical introduction to MEXT routes, research student status, application
+                documents, research plans, and official sources to check.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/students/students-260504-03-gradschool.html" aria-label="Read Graduate School in Japan">
+              <img src="/images/article-images/students/students-260504-03-gradschool.jpg" alt="An international student reviewing graduate school information for study in Japan" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Students · May 4, 2026</p>
+              <h3>
+                <a href="/articles/students/students-260504-03-gradschool.html">
+                  Graduate School in Japan: What International Students Should Know
+                </a>
+              </h3>
+              <p>
+                A practical guide to degree routes, research student status, supervisor fit,
+                admissions, language environment, funding, and preparation timelines.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="academia" class="article-category-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Academia</p>
+          <h2>Researchers &amp; Academics</h2>
+        </div>
+
+        <p class="category-description">
+          Guides for PhD students, postdocs, researchers, faculty candidates, and academics
+          navigating Japanese laboratories, universities, fellowships, research culture,
+          academic careers, and transitions beyond academia.
+        </p>
+
+        <div class="latest-list">
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/academia/academia-260504-01-rd-culture.html" aria-label="Read Japanese R&D Culture for Foreign Researchers">
+              <img src="/images/article-images/academia/academia-260504-01-rd-culture.jpg" alt="Researchers and engineers discussing a technical project in a Japanese R&D setting" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Academia · May 4, 2026</p>
+              <h3>
+                <a href="/articles/academia/academia-260504-01-rd-culture.html">
+                  Japanese R&amp;D Culture: What Foreign Researchers Should Know
+                </a>
+              </h3>
+              <p>
+                A guide to decision-making, documentation, quality expectations, communication,
+                intellectual property, and university-industry collaboration.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/academia/academia-260504-02-academia-to-industry.html" aria-label="Read Academia to Industry in Japan">
+              <img src="/images/article-images/academia/academia-260504-02-academia-to-industry.jpg" alt="A researcher preparing to transition from academia to an industry role in Japan" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Academia · May 4, 2026</p>
+              <h3>
+                <a href="/articles/academia/academia-260504-02-academia-to-industry.html">
+                  Academia to Industry in Japan
+                </a>
+              </h3>
+              <p>
+                A practical guide for researchers translating academic experience into
+                industry-relevant skills, roles, CV language, and interview preparation.
               </p>
             </div>
           </article>
@@ -210,7 +315,62 @@
               </h3>
               <p>
                 A checklist-style guide covering contract type, salary, supervisor fit,
-                research environment, visa, housing, and career planning.
+                research environment, visa, housing, family needs, and career planning.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="industry" class="article-category-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Industry</p>
+          <h2>Industry Professionals</h2>
+        </div>
+
+        <p class="category-description">
+          Guides for engineers, R&amp;D workers, manufacturing professionals, business
+          professionals, and readers interested in Japanese companies, workplace communication,
+          technical careers, and industry systems.
+        </p>
+
+        <div class="latest-list">
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/industry/industry-260504-01-rd-culture.html" aria-label="Read Japanese R&D Culture for Foreign Researchers">
+              <img src="/images/article-images/industry/industry-260504-01-rd-culture.jpg" alt="Researchers and engineers discussing a technical project in a Japanese R&D setting" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Industry · May 4, 2026</p>
+              <h3>
+                <a href="/articles/industry/industry-260504-01-rd-culture.html">
+                  Japanese R&amp;D Culture: What Foreign Researchers Should Know
+                </a>
+              </h3>
+              <p>
+                A practical guide to quality expectations, documentation, meetings,
+                communication style, confidentiality, and collaboration in Japanese R&amp;D settings.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/industry/industry-260504-02-academia-to-industry.html" aria-label="Read Academia to Industry in Japan">
+              <img src="/images/article-images/industry/industry-260504-02-academia-to-industry.jpg" alt="A researcher preparing to transition from academia to an industry role in Japan" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Industry · May 4, 2026</p>
+              <h3>
+                <a href="/articles/industry/industry-260504-02-academia-to-industry.html">
+                  Academia to Industry in Japan
+                </a>
+              </h3>
+              <p>
+                A guide for researchers considering industry roles, including transferable skills,
+                CV rewriting, interviews, language expectations, visa issues, and job search routes.
               </p>
             </div>
           </article>
@@ -228,12 +388,29 @@
                 </a>
               </h3>
               <p>
-                Practical patterns for requests, follow-ups, meeting summaries, delays,
-                attachments, and technical communication in Japanese workplaces.
+                Practical patterns for writing clear requests, technical updates, follow-ups,
+                meeting summaries, delay notices, and external emails in Japanese workplaces.
               </p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
 
+    <section id="finance" class="article-category-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Finance</p>
+          <h2>Finance &amp; Contracts</h2>
+        </div>
+
+        <p class="category-description">
+          Plain-English explanations of salary, taxes, pensions, NISA, banking, credit cards,
+          rental fees, housing costs, employment contracts, mobile contracts, and other
+          practical systems that affect life and work in Japan.
+        </p>
+
+        <div class="latest-list">
           <article class="latest-item latest-item-with-thumb">
             <a class="article-thumb" href="/articles/finance/finance-260504-01-rental-terms.html" aria-label="Read Japanese Rental Terms Explained">
               <img src="/images/article-images/finance/finance-260504-01-rental-terms.jpg" alt="A rental contract, apartment keys, and housing documents for renting in Japan" loading="lazy">
@@ -248,14 +425,48 @@
               </h3>
               <p>
                 A plain-English guide to deposits, key money, cleaning fees, restoration costs,
-                guarantor fees, and rental contract checks in Japan.
+                guarantor fees, move-in costs, and move-out checks in Japan.
               </p>
             </div>
           </article>
-        </div>
 
-        <div class="view-all-link">
-          <a class="button-primary" href="/articles.html">View all articles</a>
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/finance/finance-260504-02-salary-taxes.html" aria-label="Read Salary and Taxes in Japan">
+              <img src="/images/article-images/finance/finance-260504-02-salary-taxes.jpg" alt="A foreign professional reviewing a Japanese payslip, tax documents, and salary information" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Finance · May 4, 2026</p>
+              <h3>
+                <a href="/articles/finance/finance-260504-02-salary-taxes.html">
+                  Salary and Taxes in Japan: Basic Concepts for Foreign Professionals
+                </a>
+              </h3>
+              <p>
+                A practical guide to gross salary, take-home pay, income tax, resident tax,
+                social insurance, year-end adjustment, final tax returns, and payslips.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/finance/finance-260504-03-nisa.html" aria-label="Read NISA for Foreign Residents in Japan">
+              <img src="/images/article-images/finance/finance-260504-03-nisa.jpg" alt="A foreign resident in Japan reviewing investment documents and NISA information" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Finance · May 4, 2026</p>
+              <h3>
+                <a href="/articles/finance/finance-260504-03-nisa.html">
+                  NISA for Foreign Residents in Japan
+                </a>
+              </h3>
+              <p>
+                A practical introduction to Japan's tax-exempt investment account system,
+                eligibility, limits, risks, broker checks, foreign tax issues, and leaving Japan.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
