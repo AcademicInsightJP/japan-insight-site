@@ -4,25 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About | Japan Insights for Professionals</title>
-  <meta name="description" content="About Japan Insights for Professionals, an English-language information site about life, academia, industry, and finance in Japan.">
-  <link rel="canonical" href="https://japan-insight-site.pages.dev/about.html">
+  <title>Japan Insights for Professionals</title>
+  <meta name="description" content="Practical English guides for students, researchers, industry professionals, and readers navigating universities, industry, finance, contracts, and systems in Japan. Written from inside Japan's academic and professional systems.">
+  <link rel="canonical" href="https://japan-insight-site.pages.dev/">
 
   <link rel="icon" type="image/png" href="/images/common/favicon.png">
   <link rel="apple-touch-icon" href="/images/common/favicon.png">
-  
-  <meta property="og:title" content="About | Japan Insights for Professionals">
-  <meta property="og:description" content="About Japan Insights for Professionals, an English-language information site about life, academia, industry, and finance in Japan.">
+
+  <meta property="og:title" content="Japan Insights for Professionals">
+  <meta property="og:description" content="Practical English guides for students, researchers, industry professionals, and readers navigating universities, industry, finance, contracts, and systems in Japan.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://japan-insight-site.pages.dev/about.html">
+  <meta property="og:url" content="https://japan-insight-site.pages.dev/">
   <meta property="og:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About | Japan Insights for Professionals">
-  <meta name="twitter:description" content="About Japan Insights for Professionals, an English-language information site about life, academia, industry, and finance in Japan.">
+  <meta name="twitter:title" content="Japan Insights for Professionals">
+  <meta name="twitter:description" content="Practical English guides for students, researchers, industry professionals, and readers navigating universities, industry, finance, contracts, and systems in Japan.">
   <meta name="twitter:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
 
   <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    @media (min-width: 901px) {
+      .hero-content-pc-left {
+        transform: translateX(-140px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-content-pc-left {
+        transform: none;
+      }
+    }
+
+    .latest-item-with-thumb {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .article-thumb {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--soft-blue);
+    }
+
+    .article-thumb img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+
+    .article-thumb:hover img {
+      transform: scale(1.03);
+    }
+
+    .article-thumb:hover {
+      text-decoration: none;
+    }
+
+    .view-all-link {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .author-section {
+      background: var(--white);
+      padding: 64px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .author-box {
+      max-width: 860px;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
+      padding: 34px 36px;
+    }
+
+    .author-box h2 {
+      color: var(--navy);
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.2;
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .author-box p {
+      color: #374151;
+      line-height: 1.78;
+      margin: 0 0 18px;
+    }
+
+    .author-box a {
+      font-weight: 800;
+    }
+
+    @media (max-width: 640px) {
+      .latest-item-with-thumb {
+        grid-template-columns: 1fr;
+      }
+
+      .article-thumb img {
+        aspect-ratio: 16 / 9;
+      }
+
+      .author-section {
+        padding: 48px 0;
+      }
+
+      .author-box {
+        padding: 28px 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -41,100 +140,184 @@
   </header>
 
   <main>
-    <section class="intro-section">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content hero-content-pc-left">
+        <p class="hero-label">For globally minded professionals</p>
+        <h1>Practical insights into universities, industry, and finance in Japan.</h1>
+        <p class="hero-subtitle">
+          Clear English guides for students, researchers, engineers, business professionals,
+          and globally mobile readers navigating Japanese systems.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button-primary" href="/articles.html">Read Articles</a>
+          <a class="button-secondary" href="/about.html">About This Site</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section">
       <div class="container">
-        <article class="intro-text">
-          <p class="section-label">About</p>
-          <h2>About Japan Insights for Professionals</h2>
+        <div class="section-heading">
+          <p class="section-label">Start here</p>
+          <h2>Featured topics</h2>
+        </div>
 
+        <div class="card-grid">
+          <article class="topic-card">
+            <div class="card-tag">Students</div>
+            <h3>Students</h3>
+            <p>
+              Guides for international students and applicants considering Japanese
+              universities, scholarships, graduate school, student life, and basic procedures.
+            </p>
+            <a href="/articles.html#students">View student guides →</a>
+          </article>
+
+          <article class="topic-card">
+            <div class="card-tag">Academia</div>
+            <h3>Researchers &amp; Academics</h3>
+            <p>
+              Practical information for PhD students, postdocs, researchers, faculty candidates,
+              and academics navigating Japanese universities and research systems.
+            </p>
+            <a href="/articles.html#academia">View academic guides →</a>
+          </article>
+
+          <article class="topic-card">
+            <div class="card-tag">Industry</div>
+            <h3>Industry Professionals</h3>
+            <p>
+              Notes for engineers, R&amp;D workers, business professionals, and globally minded
+              readers interested in Japanese companies, work culture, and industry systems.
+            </p>
+            <a href="/articles.html#industry">View industry guides →</a>
+          </article>
+
+          <article class="topic-card">
+            <div class="card-tag">Finance</div>
+            <h3>Finance &amp; Contracts</h3>
+            <p>
+              Plain-English explanations of money, salary, taxes, pensions, housing costs,
+              rental fees, contracts, banking, and other practical systems in Japan.
+            </p>
+            <a href="/articles.html#finance">View finance guides →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">Latest articles</p>
+          <h2>Recent guides</h2>
+        </div>
+
+        <div class="latest-list">
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/students/students-260504-01-contact.html" aria-label="Read How to Contact a Japanese Professor Before Applying">
+              <img src="/images/article-images/students/students-260504-01-contact.jpg" alt="A student preparing an email to contact a Japanese professor before applying" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Students · May 4, 2026</p>
+              <h3>
+                <a href="/articles/students/students-260504-01-contact.html">
+                  How to Contact a Japanese Professor Before Applying
+                </a>
+              </h3>
+              <p>
+                A practical guide for international students on writing a concise, respectful,
+                and research-focused first email to a Japanese professor.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/academia/academia-260504-03-postdoc-life.html" aria-label="Read Postdoc Life in Japan">
+              <img src="/images/article-images/academia/academia-260504-03-postdoc-life.jpg" alt="A postdoctoral researcher reviewing documents before accepting a research position in Japan" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Academia · May 4, 2026</p>
+              <h3>
+                <a href="/articles/academia/academia-260504-03-postdoc-life.html">
+                  Postdoc Life in Japan: What to Check Before Accepting a Position
+                </a>
+              </h3>
+              <p>
+                A checklist-style guide covering contract type, salary, supervisor fit,
+                research environment, visa, housing, and career planning.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/industry/industry-260504-03-business-emails.html" aria-label="Read Japanese Business Emails for Technical Professionals">
+              <img src="/images/article-images/industry/industry-260504-03-business-emails.jpg" alt="A technical professional writing a Japanese business email on a laptop" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Industry · May 4, 2026</p>
+              <h3>
+                <a href="/articles/industry/industry-260504-03-business-emails.html">
+                  Japanese Business Emails for Technical Professionals
+                </a>
+              </h3>
+              <p>
+                Practical patterns for requests, follow-ups, meeting summaries, delays,
+                attachments, and technical communication in Japanese workplaces.
+              </p>
+            </div>
+          </article>
+
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/finance/finance-260504-01-rental-terms.html" aria-label="Read Japanese Rental Terms Explained">
+              <img src="/images/article-images/finance/finance-260504-01-rental-terms.jpg" alt="A rental contract, apartment keys, and housing documents for renting in Japan" loading="lazy">
+            </a>
+
+            <div>
+              <p class="article-meta">Finance · May 4, 2026</p>
+              <h3>
+                <a href="/articles/finance/finance-260504-01-rental-terms.html">
+                  Japanese Rental Terms Explained: Shikikin, Reikin, and Cleaning Fees
+                </a>
+              </h3>
+              <p>
+                A plain-English guide to deposits, key money, cleaning fees, restoration costs,
+                guarantor fees, and rental contract checks in Japan.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="view-all-link">
+          <a class="button-primary" href="/articles.html">View all articles</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="author-section">
+      <div class="container">
+        <div class="author-box">
+          <p class="section-label">About the author</p>
+          <h2>Written from inside Japan’s academic and professional systems.</h2>
           <p>
-            Japan Insights for Professionals is an independent English-language information
-            site for globally minded professionals who want to better understand life,
-            academia, industry, finance, and practical systems in Japan.
+            Japan Insights for Professionals is written by a Japan-based university faculty member
+            with first-hand experience in Japanese academia, research environments, university systems,
+            and industry collaboration. The site explains Japan-specific procedures, expectations,
+            and practical systems in clear English for internationally minded readers.
           </p>
-
           <p>
-            The purpose of this site is to explain Japan-specific information in clear,
-            practical English. Topics may include Japanese housing practices, academic
-            systems, research and industry culture, everyday administrative procedures,
-            and personal finance-related systems.
+            Articles on finance, housing, tax, contracts, and investment are written for general
+            informational purposes and are not a substitute for professional legal, tax, investment,
+            or financial advice.
           </p>
-
-          <h2>Who this site is for</h2>
-
-          <p>
-            This site is intended for readers such as researchers, students, engineers,
-            business professionals, finance-minded workers, and other internationally
-            oriented people who are interested in living, working, studying, or doing
-            professional activities in Japan.
-          </p>
-
-          <p>
-            It may also be useful for people outside Japan who want to understand Japanese
-            systems before visiting, relocating, applying to a university, joining a research
-            group, working with a Japanese company, or planning a longer stay.
-          </p>
-
-          <h2>What this site covers</h2>
-
-          <p>
-            Japan Insights for Professionals may cover topics such as:
-          </p>
-
-          <ul>
-            <li>Japanese academia, universities, research culture, and application processes</li>
-            <li>Japanese industry, R&amp;D, manufacturing, and professional work culture</li>
-            <li>Housing, rental contracts, move-out costs, and daily life in Japan</li>
-            <li>Japanese administrative systems, public procedures, and practical documents</li>
-            <li>Personal finance-related systems such as salaries, taxes, pensions, and investment frameworks</li>
-            <li>Plain-English explanations of Japanese terms, documents, and institutional practices</li>
-          </ul>
-
-          <h2>Editorial approach</h2>
-
-          <p>
-            This site aims to be practical, careful, and source-aware. Japan-specific systems
-            can be difficult to understand from outside the country, especially when important
-            information is available mainly in Japanese.
-          </p>
-
-          <p>
-            The goal is not to provide sensational advice or one-size-fits-all answers, but to
-            help readers understand the basic structure, terminology, and practical points they
-            should check before making decisions.
-          </p>
-
-          <h2>Independence</h2>
-
-          <p>
-            This is an independent personal information site. The views and explanations
-            provided here are those of the site operator and do not represent any university,
-            company, public institution, or other organization.
-          </p>
-
-          <p>
-            Some pages may contain affiliate links or external links. When affiliate links are
-            used, they will be handled in accordance with the site’s disclaimer and disclosure
-            policy.
-          </p>
-
-          <h2>Important note</h2>
-
-          <p>
-            The information on this site is provided for general informational purposes only.
-            It does not constitute legal, tax, financial, immigration, real estate, employment,
-            academic, or other professional advice.
-          </p>
-
-          <p>
-            For important decisions, readers should confirm information with official sources,
-            qualified professionals, or the relevant institution.
-          </p>
-
-          <p>
-            Last updated: May 2026
-          </p>
-        </article>
+          <a href="/about.html">Learn more about this site →</a>
+        </div>
       </div>
     </section>
   </main>
