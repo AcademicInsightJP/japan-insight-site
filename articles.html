@@ -71,6 +71,36 @@
       margin-bottom: 8px;
     }
 
+    .latest-item-with-thumb {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    .article-thumb {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--soft-blue);
+    }
+
+    .article-thumb img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transition: transform 0.25s ease;
+    }
+
+    .article-thumb:hover img {
+      transform: scale(1.03);
+    }
+
+    .article-thumb:hover {
+      text-decoration: none;
+    }
+
     @media (max-width: 900px) {
       .article-category-nav {
         grid-template-columns: repeat(2, 1fr);
@@ -80,6 +110,14 @@
     @media (max-width: 640px) {
       .article-category-nav {
         grid-template-columns: 1fr;
+      }
+
+      .latest-item-with-thumb {
+        grid-template-columns: 1fr;
+      }
+
+      .article-thumb img {
+        aspect-ratio: 16 / 9;
       }
     }
   </style>
@@ -151,7 +189,11 @@
         </p>
 
         <div class="latest-list">
-          <article class="latest-item">
+          <article class="latest-item latest-item-with-thumb">
+            <a class="article-thumb" href="/articles/students/students-260504-01-contact.html" aria-label="Read How to Contact a Japanese Professor Before Applying">
+              <img src="/images/article-images/students/students-260504-01-contact.jpg" alt="A student preparing an email to contact a Japanese professor before applying" loading="lazy">
+            </a>
+
             <div>
               <p class="article-meta">Students · May 4, 2026</p>
               <h3>
