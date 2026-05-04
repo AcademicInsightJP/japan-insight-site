@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sample Article Title | Japan Insights for Professionals</title>
+  <meta name="description" content="A sample article template for Japan Insights for Professionals, explaining Japan-related systems in clear English for globally minded professionals.">
+  <link rel="canonical" href="https://japan-insight-site.pages.dev/articles/housing/sample-article.html">
+
+  <meta property="og:title" content="Sample Article Title | Japan Insights for Professionals">
+  <meta property="og:description" content="A sample article template for Japan Insights for Professionals, explaining Japan-related systems in clear English for globally minded professionals.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://japan-insight-site.pages.dev/articles/housing/sample-article.html">
+  <meta property="og:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sample Article Title | Japan Insights for Professionals">
+  <meta name="twitter:description" content="A sample article template for Japan Insights for Professionals, explaining Japan-related systems in clear English for globally minded professionals.">
+  <meta name="twitter:image" content="https://japan-insight-site.pages.dev/images/index-images/hero.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Sample Article Title",
+    "description": "A sample article template for Japan Insights for Professionals, explaining Japan-related systems in clear English for globally minded professionals.",
+    "author": {
+      "@type": "Person",
+      "name": "Japan Insights for Professionals"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Japan Insights for Professionals"
+    },
+    "datePublished": "2026-05-04",
+    "dateModified": "2026-05-04",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://japan-insight-site.pages.dev/articles/housing/sample-article.html"
+    },
+    "image": "https://japan-insight-site.pages.dev/images/index-images/hero.jpg"
+  }
+  </script>
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="/index.html" aria-label="Japan Insights for Professionals Home">
+        <img src="/images/common/jiprof-logo.png" alt="JIProf. Japan Insights for Professionals">
+      </a>
+
+      <nav class="main-nav">
+        <a href="/index.html">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro-section">
+      <div class="container">
+        <article class="intro-text">
+          <p class="section-label">Housing in Japan</p>
+
+          <h1>Sample Article Title: Understanding a Japan-Specific System</h1>
+
+          <p class="article-meta">
+            Housing · Published May 4, 2026 · Last updated May 4, 2026
+          </p>
+
+          <p>
+            This is a short lead paragraph. It should explain who the article is for,
+            what problem it solves, and what the reader will understand after reading it.
+            For example, this article explains a common Japan-specific housing issue in
+            clear English for foreign professionals, researchers, students, and globally
+            mobile readers.
+          </p>
+
+          <h2>Quick summary</h2>
+
+          <ul>
+            <li>This section gives the reader the main conclusion first.</li>
+            <li>Use short bullet points for practical information.</li>
+            <li>Clarify what readers should check before making a decision.</li>
+            <li>Link to official sources when the topic depends on rules, laws, or institutions.</li>
+          </ul>
+
+          <h2>Why this matters</h2>
+
+          <p>
+            Many Japan-specific systems are difficult to understand because the important
+            information is often written in Japanese, scattered across official documents,
+            or explained through local practices rather than simple written rules.
+          </p>
+
+          <p>
+            This article template is designed to explain such topics in a structured way:
+            first the basic idea, then the practical meaning, then points to check, and
+            finally cautions or next steps.
+          </p>
+
+          <h2>Basic terms</h2>
+
+          <p>
+            Start by defining the key terms. If the topic involves Japanese words, give the
+            Japanese term, a direct translation, and a practical explanation.
+          </p>
+
+          <ul>
+            <li><strong>Term 1:</strong> Short explanation of the first important term.</li>
+            <li><strong>Term 2:</strong> Short explanation of the second important term.</li>
+            <li><strong>Term 3:</strong> Short explanation of the third important term.</li>
+          </ul>
+
+          <h2>Practical interpretation</h2>
+
+          <p>
+            This section should explain what the topic means in real life. For example,
+            if the article is about rental contracts, this is where you explain what the
+            clause usually means for tenants, what documents to request, and what should
+            be confirmed before signing or paying.
+          </p>
+
+          <p>
+            Avoid presenting individual legal, tax, financial, immigration, or real estate
+            advice. Instead, frame the article as general information and encourage readers
+            to confirm important matters with official sources or qualified professionals.
+          </p>
+
+          <h2>Checklist</h2>
+
+          <p>
+            A checklist is useful for practical articles. It also makes the page easier to
+            scan on mobile devices.
+          </p>
+
+          <ul>
+            <li>Check the official name of the document or procedure.</li>
+            <li>Confirm the deadline, fee, and required documents.</li>
+            <li>Save screenshots, receipts, emails, and written explanations.</li>
+            <li>Ask for clarification if the explanation is unclear.</li>
+            <li>Consult an appropriate professional for important individual decisions.</li>
+          </ul>
+
+          <h2>Common mistakes</h2>
+
+          <p>
+            This section can explain common misunderstandings. It is especially useful for
+            articles aimed at readers who are new to Japan.
+          </p>
+
+          <ul>
+            <li>Assuming that English summaries always capture the full Japanese meaning.</li>
+            <li>Relying on informal explanations without checking the original document.</li>
+            <li>Missing deadlines or notice periods because they are written in Japanese.</li>
+            <li>Confusing general practice with legally guaranteed rules.</li>
+          </ul>
+
+          <h2>Useful sources to check</h2>
+
+          <p>
+            When writing the real article, add links to official or highly reliable sources
+            here. For example, government agencies, municipal offices, universities, public
+            institutions, or official service providers.
+          </p>
+
+          <ul>
+            <li>Official source 1</li>
+            <li>Official source 2</li>
+            <li>Relevant institutional page</li>
+          </ul>
+
+          <h2>Final note</h2>
+
+          <p>
+            This article is intended to provide general information and practical context.
+            Rules, fees, procedures, and institutional practices may change, and individual
+            situations may differ. Readers should confirm important matters with official
+            sources or qualified professionals.
+          </p>
+
+          <p>
+            <a href="/articles.html">← Back to Articles</a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 Japan Insights for Professionals. All rights reserved.</p>
+      <p>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <span>|</span>
+        <a href="/privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
