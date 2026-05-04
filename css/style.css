@@ -45,7 +45,7 @@ a:hover {
 .header-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 14px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,9 +61,9 @@ a:hover {
 
 .site-logo img {
   display: block;
-  height: 46px;
+  height: 92px;
   width: auto;
-  max-width: 380px;
+  max-width: 760px;
 }
 
 .site-logo:hover {
@@ -375,8 +375,8 @@ a:hover {
   }
 
   .site-logo img {
-    height: 38px;
-    max-width: 280px;
+    height: 76px;
+    max-width: 560px;
   }
 
   .main-nav {
