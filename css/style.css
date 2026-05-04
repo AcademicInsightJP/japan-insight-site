@@ -187,11 +187,9 @@ a:hover {
   padding: 64px 0;
 }
 
+/* Single full-width intro box */
 .intro-section .container {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 32px;
-  align-items: start;
+  display: block;
 }
 
 /* Cards and boxes */
@@ -209,6 +207,7 @@ a:hover {
 
 .intro-text {
   padding: 34px;
+  width: 100%;
 }
 
 .intro-card {
@@ -344,10 +343,6 @@ a:hover {
 /* Responsive */
 
 @media (max-width: 900px) {
-  .intro-section .container {
-    grid-template-columns: 1fr;
-  }
-
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
