@@ -216,13 +216,8 @@
     }
 
     .article-sidebar {
-      position: sticky;
-      top: 88px;
+      position: static;
       align-self: start;
-      max-height: calc(100vh - 112px);
-      overflow-y: auto;
-      padding-right: 4px;
-      overscroll-behavior: contain;
     }
 
     .toc-box {
@@ -310,11 +305,7 @@
       }
 
       .article-sidebar {
-        position: static;
         order: -1;
-        max-height: none;
-        overflow: visible;
-        padding-right: 0;
       }
     }
 
