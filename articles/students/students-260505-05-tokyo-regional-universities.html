@@ -243,6 +243,70 @@
     }
 
 
+    .sidebar-related-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(16, 42, 67, 0.06);
+      padding: 20px;
+      margin-top: 18px;
+    }
+
+    .sidebar-related-box h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+
+    .sidebar-related-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .sidebar-related-card {
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+
+    .sidebar-related-card:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .sidebar-related-thumb,
+    .read-next-thumb {
+      display: block;
+      background: var(--light-bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .sidebar-related-thumb {
+      margin-bottom: 8px;
+    }
+
+    .sidebar-related-thumb img,
+    .read-next-thumb img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+
+    .sidebar-related-card:hover img,
+    .read-next-card:hover img {
+      transform: scale(1.02);
+    }
+
+    .sidebar-related-card > a:not(.sidebar-related-thumb) {
+      display: block;
+      color: var(--deep-blue);
+      font-weight: 800;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
     .read-next-box {
       margin: 42px 0 0;
       padding-top: 24px;
@@ -264,9 +328,13 @@
     }
 
     .read-next-card {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
       border: 1px solid var(--border);
       background: var(--white);
-      padding: 16px 18px;
+      padding: 14px;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
 
@@ -275,7 +343,7 @@
       transform: translateY(-1px);
     }
 
-    .read-next-card a {
+    .read-next-content a {
       display: block;
       color: var(--deep-blue);
       font-weight: 800;
@@ -283,7 +351,7 @@
       margin-bottom: 6px;
     }
 
-    .read-next-card p {
+    .read-next-content p {
       margin: 0;
       color: var(--muted);
       font-size: 0.93rem;
@@ -332,6 +400,10 @@
 
       .article-feature-image img {
         aspect-ratio: 4 / 3;
+      }
+
+      .read-next-card {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -549,16 +621,31 @@
             <h2>Read next</h2>
             <div class="read-next-grid">
               <div class="read-next-card" data-category="Students" data-tags="funding scholarship lab-selection professor-contact graduate-school international-students">
-                <a href="/articles/students/students-260505-04-lab-funding.html">How to Check a Japanese Lab’s Funding and Scholarship Options Before Contacting a Professor</a>
-                <p>Learn how to read funding signals such as KAKEN, JST, NEDO, and researchmap before contacting a Japanese professor.</p>
+                <a class="read-next-thumb" href="/articles/students/students-260505-04-lab-funding.html" aria-label="Read: How to Check a Japanese Lab’s Funding and Scholarship Options Before Contacting a Professor">
+                  <img src="/images/article-images/students/students-260505-04-lab-funding.jpg" alt="Thumbnail for an article about checking Japanese lab funding and scholarship options">
+                </a>
+                <div class="read-next-content">
+                  <a href="/articles/students/students-260505-04-lab-funding.html">How to Check a Japanese Lab’s Funding and Scholarship Options Before Contacting a Professor</a>
+                  <p>Learn how to read funding signals such as KAKEN, JST, NEDO, and researchmap before contacting a Japanese professor.</p>
+                </div>
               </div>
               <div class="read-next-card" data-category="Industry" data-tags="job-hunting masters doctoral phd japanese-language industry research-career international-students">
-                <a href="/articles/industry/industry-260505-04-job-hunting-masters-doctoral.html">Job Hunting in Japan: How It Differs for Master’s and Doctoral Students</a>
-                <p>Compare master’s and doctoral routes for foreign students who want research-based or R&amp;D careers in Japan.</p>
+                <a class="read-next-thumb" href="/articles/industry/industry-260505-04-job-hunting-masters-doctoral.html" aria-label="Read: Job Hunting in Japan: How It Differs for Master’s and Doctoral Students">
+                  <img src="/images/article-images/industry/industry-260505-04-job-hunting-masters-doctoral.jpg" alt="Thumbnail for an article about job hunting in Japan for master’s and doctoral students">
+                </a>
+                <div class="read-next-content">
+                  <a href="/articles/industry/industry-260505-04-job-hunting-masters-doctoral.html">Job Hunting in Japan: How It Differs for Master’s and Doctoral Students</a>
+                  <p>Compare master’s and doctoral routes for foreign students who want research-based or R&amp;D careers in Japan.</p>
+                </div>
               </div>
               <div class="read-next-card" data-category="Academia" data-tags="academia researchers national-universities private-universities research-career japan">
-                <a href="/articles/academia/academia-260505-04-national-private-universities.html">National vs. Private Universities in Japan: Which Is Better for Researchers?</a>
-                <p>Understand how national and private universities differ when your priority is a research-intensive academic career.</p>
+                <a class="read-next-thumb" href="/articles/academia/academia-260505-04-national-private-universities.html" aria-label="Read: National vs. Private Universities in Japan: Which Is Better for Researchers?">
+                  <img src="/images/article-images/academia/academia-260505-04-national-private-universities.jpg" alt="Thumbnail for an article comparing national and private universities in Japan for researchers">
+                </a>
+                <div class="read-next-content">
+                  <a href="/articles/academia/academia-260505-04-national-private-universities.html">National vs. Private Universities in Japan: Which Is Better for Researchers?</a>
+                  <p>Understand how national and private universities differ when your priority is a research-intensive academic career.</p>
+                </div>
               </div>
             </div>
           </section>
@@ -584,6 +671,30 @@
               <li><a href="#checklist">Checklist</a></li>
               <li><a href="#official-sources">Official sources</a></li>
             </ol>
+          </div>
+
+          <div class="sidebar-related-box" data-related-mode="tag-overlap">
+            <h2>Related articles</h2>
+            <div class="sidebar-related-list">
+              <div class="sidebar-related-card" data-category="Students" data-tags="funding scholarship lab-selection professor-contact graduate-school international-students">
+                <a class="sidebar-related-thumb" href="/articles/students/students-260505-04-lab-funding.html" aria-label="Read: How to Check a Japanese Lab’s Funding and Scholarship Options Before Contacting a Professor">
+                  <img src="/images/article-images/students/students-260505-04-lab-funding.jpg" alt="Thumbnail for an article about Japanese lab funding and scholarship options">
+                </a>
+                <a href="/articles/students/students-260505-04-lab-funding.html">How to Check a Japanese Lab’s Funding and Scholarship Options Before Contacting a Professor</a>
+              </div>
+              <div class="sidebar-related-card" data-category="Industry" data-tags="job-hunting masters doctoral phd japanese-language industry research-career international-students">
+                <a class="sidebar-related-thumb" href="/articles/industry/industry-260505-04-job-hunting-masters-doctoral.html" aria-label="Read: Job Hunting in Japan: How It Differs for Master’s and Doctoral Students">
+                  <img src="/images/article-images/industry/industry-260505-04-job-hunting-masters-doctoral.jpg" alt="Thumbnail for an article about job hunting in Japan for master’s and doctoral students">
+                </a>
+                <a href="/articles/industry/industry-260505-04-job-hunting-masters-doctoral.html">Job Hunting in Japan: How It Differs for Master’s and Doctoral Students</a>
+              </div>
+              <div class="sidebar-related-card" data-category="Academia" data-tags="academia researchers national-universities private-universities research-career japan">
+                <a class="sidebar-related-thumb" href="/articles/academia/academia-260505-04-national-private-universities.html" aria-label="Read: National vs. Private Universities in Japan: Which Is Better for Researchers?">
+                  <img src="/images/article-images/academia/academia-260505-04-national-private-universities.jpg" alt="Thumbnail for an article comparing national and private universities in Japan for researchers">
+                </a>
+                <a href="/articles/academia/academia-260505-04-national-private-universities.html">National vs. Private Universities in Japan: Which Is Better for Researchers?</a>
+              </div>
+            </div>
           </div>
         </aside>
       </div>
