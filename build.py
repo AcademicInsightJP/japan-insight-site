@@ -5,8 +5,8 @@ Build script for Japan Insights for Professionals.
 What it does:
 1. Scans articles/**/*.html.
 2. Extracts article metadata from each article HTML.
-3. Generates public/index.html from templates/index.template.html.
-4. Generates public/articles.html from templates/articles.template.html.
+3. Generates public/ from templates/index.template.html.
+4. Generates public/articles from templates/articles.template.html.
 5. Generates public/sitemap.xml.
 6. Copies static assets and fixed pages into public/.
 7. Refreshes tag-based Related articles / Read next blocks in article pages.
@@ -167,7 +167,7 @@ def normalize_tags(raw: str | None) -> tuple[str, ...]:
 def extract_article(path: Path) -> Article:
     source = read_text(path)
     rel_path = path.as_posix()
-    url_path = rel_path
+    url_path = re.sub(r"\.html$", "", rel_path)
 
     title = None
     m = re.search(r"<h1[^>]*>(.*?)</h1>", source, flags=re.DOTALL | re.IGNORECASE)
@@ -275,10 +275,10 @@ def today_lastmod() -> str:
 def render_sitemap(articles: list[Article]) -> str:
     static_urls = [
         (f"{SITE_BASE_URL}/", today_lastmod(), "weekly", "1.0"),
-        (f"{SITE_BASE_URL}/articles.html", today_lastmod(), "weekly", "0.9"),
-        (f"{SITE_BASE_URL}/about.html", "2026-05-04", "monthly", "0.6"),
-        (f"{SITE_BASE_URL}/privacy.html", "2026-05-04", "yearly", "0.3"),
-        (f"{SITE_BASE_URL}/disclaimer.html", "2026-05-04", "yearly", "0.3"),
+        (f"{SITE_BASE_URL}/articles", today_lastmod(), "weekly", "0.9"),
+        (f"{SITE_BASE_URL}/about", "2026-05-04", "monthly", "0.6"),
+        (f"{SITE_BASE_URL}/privacy", "2026-05-04", "yearly", "0.3"),
+        (f"{SITE_BASE_URL}/disclaimer", "2026-05-04", "yearly", "0.3"),
     ]
 
     lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
