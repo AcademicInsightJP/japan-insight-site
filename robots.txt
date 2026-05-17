@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://japan-insight-site.pages.dev/sitemap.xml
+Sitemap: https://japan-insight-site.pages.dev/sitemap-pages.xml
+Sitemap: https://japan-insight-site.pages.dev/sitemap.txt
