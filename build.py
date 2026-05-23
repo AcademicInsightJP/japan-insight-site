@@ -7,7 +7,7 @@ What it does:
 2. Extracts article metadata from each article HTML.
 3. Generates public/ from templates/index.template.html.
 4. Generates public/articles from templates/articles.template.html.
-5. Generates public/sitemap.xml.
+5. Generates public/sitemap.xml, public/sitemap-pages.xml, and public/sitemap.txt.
 6. Copies static assets and fixed pages into public/.
 7. Refreshes tag-based Related articles / Read next blocks in article pages.
 
@@ -56,7 +56,7 @@ COPY_EXCLUDE_NAMES = {
     "templates",
     "build.py",
 }
-GENERATED_ROOT_FILES = {"index.html", "articles.html", "sitemap.xml"}
+GENERATED_ROOT_FILES = {"index.html", "articles.html", "sitemap.xml", "sitemap-pages.xml", "sitemap.txt"}
 
 
 @dataclass(frozen=True)
@@ -272,7 +272,17 @@ def today_lastmod() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 
-def render_sitemap(articles: list[Article]) -> str:
+def sitemap_entries(articles: list[Article]) -> list[tuple[str, str, str, str]]:
+    """Return all URLs used by XML and TXT sitemaps.
+
+    The same source of truth is used for:
+    - public/sitemap.xml
+    - public/sitemap-pages.xml
+    - public/sitemap.txt
+
+    This prevents backup sitemap files from becoming stale when new articles
+    are added and the site is rebuilt.
+    """
     static_urls = [
         (f"{SITE_BASE_URL}/", today_lastmod(), "weekly", "1.0"),
         (f"{SITE_BASE_URL}/articles", today_lastmod(), "weekly", "0.9"),
@@ -281,8 +291,16 @@ def render_sitemap(articles: list[Article]) -> str:
         (f"{SITE_BASE_URL}/disclaimer", "2026-05-04", "yearly", "0.3"),
     ]
 
+    article_urls = [
+        (article.full_url, article.date_published, "monthly", "0.8")
+        for article in sorted(articles, key=lambda a: a.url_path)
+    ]
+    return static_urls + article_urls
+
+
+def render_sitemap(articles: list[Article]) -> str:
     lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for loc, lastmod, changefreq, priority in static_urls:
+    for loc, lastmod, changefreq, priority in sitemap_entries(articles):
         lines.extend([
             "  <url>",
             f"    <loc>{esc(loc)}</loc>",
@@ -291,17 +309,13 @@ def render_sitemap(articles: list[Article]) -> str:
             f"    <priority>{esc(priority)}</priority>",
             "  </url>",
         ])
-    for article in sorted(articles, key=lambda a: a.url_path):
-        lines.extend([
-            "  <url>",
-            f"    <loc>{esc(article.full_url)}</loc>",
-            f"    <lastmod>{esc(article.date_published)}</lastmod>",
-            "    <changefreq>monthly</changefreq>",
-            "    <priority>0.8</priority>",
-            "  </url>",
-        ])
     lines.append("</urlset>")
     return "\n".join(lines) + "\n"
+
+
+def render_sitemap_txt(articles: list[Article]) -> str:
+    # TXT sitemap format: one absolute URL per line.
+    return "\n".join(loc for loc, _lastmod, _changefreq, _priority in sitemap_entries(articles)) + "\n"
 
 
 def relation_score(current: Article, candidate: Article) -> tuple[int, datetime, str]:
@@ -438,11 +452,14 @@ def main() -> None:
     copy_source_to_public()
     write_text(OUTPUT_DIR / "index.html", render_index(articles))
     write_text(OUTPUT_DIR / "articles.html", render_articles_page(articles))
-    write_text(OUTPUT_DIR / "sitemap.xml", render_sitemap(articles))
+    sitemap_xml = render_sitemap(articles)
+    write_text(OUTPUT_DIR / "sitemap.xml", sitemap_xml)
+    write_text(OUTPUT_DIR / "sitemap-pages.xml", sitemap_xml)
+    write_text(OUTPUT_DIR / "sitemap.txt", render_sitemap_txt(articles))
     update_public_article_pages(articles)
 
     print(f"Built {OUTPUT_DIR}/ with {len(articles)} articles.")
-    print("Generated: index.html, articles.html, sitemap.xml")
+    print("Generated: index.html, articles.html, sitemap.xml, sitemap-pages.xml, sitemap.txt")
     print("Updated: article related links in public article pages")
 
 
